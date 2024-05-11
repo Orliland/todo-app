@@ -1,9 +1,10 @@
 import "./App.css";
+import Task from "./components/Task";
 
 function App() {
   return (
     <>
-      <h1>My todo app</h1>
+      <Task />
     </>
   );
 }
