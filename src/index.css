@@ -1,11 +1,15 @@
 :root {
   font-family: "Josefin Sans", sans-serif;
   font-size: 62.5%;
+
+  --light-gray: #f9f9f9; /* body bg */
 }
 
 body {
   margin: 0;
   padding: 0;
+
+  background-color: var(--light-gray);
 
   font-size: 1.8rem;
 }
