@@ -1,4 +1,5 @@
 import Task from "../Task";
+import "./tasks.css";
 
 export default function Tasks({ tasks, onChecked, onDelete }) {
   return (
