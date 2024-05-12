@@ -6,7 +6,7 @@ export default function Task() {
   // TODO: si la tarea se marca como completada, añadir clase task__label--checked
   return (
     <div className="task">
-      <input type="radio" className="task__check" />
+      <input type="checkbox" className="task__check" />
       <label className="task__label">Jog around the park 3x</label>
       <button className="task__delete">
         <img src={IconCross} alt="delete task" className="task__delete-icon" />
