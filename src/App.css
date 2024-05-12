@@ -1,5 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  margin: 0 2.4rem;
+  max-width: 54rem;
 }
