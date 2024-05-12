@@ -7,8 +7,10 @@
   --very-ligth-gray: #d1d2da; /* task checked text */
   --white: #ffffff;
   --dark-purple: #494c6b; /* task text */
+  --light-gray-transparent: #c2c3d680;
 
   --gradiente-check: linear-gradient(90deg, #55ddff 0%, #c058f3 100%);
+  --card-shadow: 0 3.5rem 5rem -1.5rem var(--light-gray-transparent);
 
   --body: 400 1.2rem "Josefin Sans", sans-serif; /* task text */
 }
