@@ -1,31 +1,33 @@
 import { useState } from "react";
 import "./App.css";
 
+import Tasks from "./components/Tasks";
+
 const initialTasks = [
   {
     id: 1,
     name: "Jog around the park 3x",
-    completed: false,
+    done: false,
   },
   {
     id: 2,
     name: "10 minutes meditation",
-    completed: false,
+    done: false,
   },
   {
     id: 3,
     name: "Read for 1 hour",
-    completed: false,
+    done: false,
   },
   {
     id: 4,
     name: "Pick up groceries",
-    completed: false,
+    done: false,
   },
   {
     id: 5,
     name: "Complete Todo App on Frontend Mentor",
-    completed: false,
+    done: false,
   },
 ];
 
@@ -33,9 +35,25 @@ let nextId = 6;
 
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
+
+  const onCheckTaskHandler = (id) => {
+    setTasks(
+      tasks.map((t) => {
+        if (t.id == id) {
+          return {
+            ...t,
+            done: !t.done,
+          };
+        } else {
+          return t;
+        }
+      })
+    );
+  };
+
   return (
     <>
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} onChecked={onCheckTaskHandler} />
     </>
   );
 }
