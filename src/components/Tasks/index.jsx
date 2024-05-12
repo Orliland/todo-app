@@ -1,10 +1,12 @@
 import Task from "../Task";
 import "./tasks.css";
-const InfoTasks = ({ tasksLenght, onClearTasks }) => {
+const InfoTasks = ({ tasksLength, onClearTasks }) => {
   return (
-    <div className="tasks">
-      <span>{tasksLenght} items left</span>
-      <button onClick={onClearTasks}>Clear Completed</button>
+    <div className="task">
+      <span className="tasks__length">{tasksLength} items left</span>
+      <button className="tasks__clear" onClick={onClearTasks}>
+        Clear Completed
+      </button>
     </div>
   );
 };
@@ -22,7 +24,7 @@ export default function Tasks({ tasks, onChecked, onDelete, onClearTasks }) {
           onDelete={onDelete}
         />
       ))}
-      <InfoTasks onClearTasks={onClearTasks} />
+      <InfoTasks tasksLength={tasks.length} onClearTasks={onClearTasks} />
     </div>
   );
 }
