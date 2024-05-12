@@ -51,9 +51,17 @@ function App() {
     );
   };
 
+  const onDeleteTaskHandler = (id) => {
+    setTasks(tasks.filter((t) => t.id !== id));
+  };
+
   return (
     <>
-      <Tasks tasks={tasks} onChecked={onCheckTaskHandler} />
+      <Tasks
+        tasks={tasks}
+        onChecked={onCheckTaskHandler}
+        onDelete={onDeleteTaskHandler}
+      />
     </>
   );
 }

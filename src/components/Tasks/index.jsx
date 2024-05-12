@@ -1,6 +1,6 @@
 import Task from "../Task";
 
-export default function Tasks({ tasks, onChecked }) {
+export default function Tasks({ tasks, onChecked, onDelete }) {
   return (
     <div>
       {tasks.map((task) => (
@@ -10,6 +10,7 @@ export default function Tasks({ tasks, onChecked }) {
           name={task.name}
           done={task.done}
           onChecked={onChecked}
+          onDelete={onDelete}
         />
       ))}
     </div>

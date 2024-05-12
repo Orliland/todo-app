@@ -1,7 +1,7 @@
 import IconCross from "../../assets/icon-cross.svg";
 import "./task.css";
 
-export default function Task({ id, name, done, onChecked }) {
+export default function Task({ id, name, done, onChecked, onDelete }) {
   return (
     <div className="task">
       <input
@@ -11,8 +11,15 @@ export default function Task({ id, name, done, onChecked }) {
           onChecked(id);
         }}
       />
-      <label className="task__label">{name}</label>
-      <button className="task__delete">
+      <label className={`task__label ${done ? "task__label--checked" : ""}`}>
+        {name}
+      </label>
+      <button
+        className="task__delete"
+        onClick={() => {
+          onDelete(id);
+        }}
+      >
         <img src={IconCross} alt="delete task" className="task__delete-icon" />
       </button>
     </div>
