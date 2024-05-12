@@ -4,6 +4,7 @@
   border-radius: 0.5rem;
 
   overflow: hidden;
+  box-shadow: var(--box-shadow);
 }
 
 .input__icon {
