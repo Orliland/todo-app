@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
+import Input from "./components/Input";
 import Tasks from "./components/Tasks";
 
 const initialTasks = [
@@ -57,6 +58,7 @@ function App() {
 
   return (
     <>
+      <Input />
       <Tasks
         tasks={tasks}
         onChecked={onCheckTaskHandler}

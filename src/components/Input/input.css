@@ -1,0 +1,30 @@
+.input {
+  display: grid;
+  align-items: center;
+  border-radius: 0.5rem;
+
+  overflow: hidden;
+}
+
+.input__icon {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: inline-block;
+  margin-left: 2rem;
+  width: 2rem;
+  height: 2rem;
+  border: 0.1rem solid var(--border-gray);
+  border-radius: 50%;
+}
+
+.input__field {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 1.8rem 2rem 1.8rem 5.4rem;
+  border: none;
+
+  color: var(--gray);
+
+  font: var(--body);
+  letter-spacing: -0.017rem;
+}
