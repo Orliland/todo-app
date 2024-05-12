@@ -1,13 +1,19 @@
 import IconCross from "../../assets/icon-cross.svg";
 import "./task.css";
 
-export default function Task() {
-  // TODO: mostrar mensaje de la tarea en alt del icono
-  // TODO: si la tarea se marca como completada, añadir clase task__label--checked
+function InputCheck({ done }) {
+  if (done) {
+    return <input type="checkbox" className="task__check" checked />;
+  } else {
+    return <input type="checkbox" className="task__check" />;
+  }
+}
+
+export default function Task({ name, done }) {
   return (
     <div className="task">
-      <input type="checkbox" className="task__check" />
-      <label className="task__label">Jog around the park 3x</label>
+      <InputCheck done={done} />
+      <label className="task__label">{name}</label>
       <button className="task__delete">
         <img src={IconCross} alt="delete task" className="task__delete-icon" />
       </button>
