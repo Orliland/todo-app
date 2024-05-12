@@ -3,7 +3,7 @@ import "./tasks.css";
 
 export default function Tasks({ tasks, onChecked, onDelete }) {
   return (
-    <div>
+    <div className="tasks">
       {tasks.map((task) => (
         <Task
           key={task.id}

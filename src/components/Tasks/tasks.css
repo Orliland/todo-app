@@ -1,0 +1,6 @@
+.tasks {
+  border-radius: 0.5rem;
+
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
