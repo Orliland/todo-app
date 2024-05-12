@@ -1,7 +1,15 @@
 import Task from "../Task";
 import "./tasks.css";
+const InfoTasks = ({ tasksLenght, onClearTasks }) => {
+  return (
+    <div className="tasks">
+      <span>{tasksLenght} items left</span>
+      <button onClick={onClearTasks}>Clear Completed</button>
+    </div>
+  );
+};
 
-export default function Tasks({ tasks, onChecked, onDelete }) {
+export default function Tasks({ tasks, onChecked, onDelete, onClearTasks }) {
   return (
     <div className="tasks">
       {tasks.map((task) => (
@@ -14,6 +22,7 @@ export default function Tasks({ tasks, onChecked, onDelete }) {
           onDelete={onDelete}
         />
       ))}
+      <InfoTasks onClearTasks={onClearTasks} />
     </div>
   );
 }
