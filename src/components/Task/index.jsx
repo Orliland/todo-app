@@ -7,7 +7,9 @@ export default function Task({ id, name, done, onChecked, onDelete }) {
       <input
         type="checkbox"
         className="task__check"
+
         defaultChecked={done}
+
         onChange={() => {
           onChecked(id);
         }}
