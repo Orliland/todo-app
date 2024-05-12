@@ -11,6 +11,11 @@
   background-color: var(--white);
 }
 
+.task:last-child {
+  border: 0;
+  /* TODO: no remover borde en vista de desktop */
+}
+
 .task__check {
   margin: 0;
   width: 2rem;
