@@ -1,0 +1,23 @@
+:root {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 62.5%;
+
+  --light-gray: #f9f9f9; /* body bg */
+  --border-gray: #e3e4f1; /* task check border */
+  --very-ligth-gray: #d1d2da; /* task checked text */
+  --white: #ffffff;
+  --dark-purple: #494c6b; /* task text */
+
+  --gradiente-check: linear-gradient(90deg, #55ddff 0%, #c058f3 100%);
+
+  --body: 400 1.2rem "Josefin Sans", sans-serif; /* task text */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--light-gray);
+
+  font-size: 1.8rem;
+}
