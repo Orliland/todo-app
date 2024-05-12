@@ -83,14 +83,14 @@ function App() {
   };
 
   return (
-    <>
+    <main className="main">
       <Input task={task} onChange={onChangeTask} onSubmit={onSubmitTask} />
       <Tasks
         tasks={tasks}
         onChecked={onCheckTaskHandler}
         onDelete={onDeleteTaskHandler}
       />
-    </>
+    </main>
   );
 }
 
