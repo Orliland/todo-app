@@ -11,10 +11,6 @@
   background-color: var(--white);
 }
 
-.task:last-child {
-  border: none;
-}
-
 .task__check {
   margin: 0;
   width: 2rem;
