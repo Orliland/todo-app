@@ -40,6 +40,15 @@ const initialTasks = [
 
 let nextId = 6;
 
+function InfoTasks({ tasksLenght, onClearTasks }) {
+  return (
+    <div>
+      <span>{tasksLenght} items left</span>
+      <button onClick={onClearTasks}>Clear Completed</button>
+    </div>
+  );
+}
+
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
   const [task, setTask] = useState("");
@@ -82,6 +91,10 @@ function App() {
     setTasks(tasks.filter((t) => t.id !== id));
   };
 
+  const onClearTasksHandler = () => {
+    setTasks(tasks.filter((t) => t.done == false));
+  };
+
   return (
     <main className="main">
       <Input task={task} onChange={onChangeTask} onSubmit={onSubmitTask} />
@@ -89,6 +102,10 @@ function App() {
         tasks={tasks}
         onChecked={onCheckTaskHandler}
         onDelete={onDeleteTaskHandler}
+      />
+      <InfoTasks
+        tasksLenght={tasks.length}
+        onClearTasks={onClearTasksHandler}
       />
     </main>
   );
