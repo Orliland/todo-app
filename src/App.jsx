@@ -1,7 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 
+
 import Input from "./components/Input";
+
 import Tasks from "./components/Tasks";
 
 const initialTasks = [
@@ -21,17 +23,17 @@ const initialTasks = [
     done: false,
   },
   {
-    id: 4,
+    id: 3,
     name: "Read for 1 hour",
     done: false,
   },
   {
-    id: 5,
+    id: 4,
     name: "Pick up groceries",
     done: false,
   },
   {
-    id: 6,
+    id: 5,
     name: "Complete Todo App on Frontend Mentor",
     done: false,
   },
