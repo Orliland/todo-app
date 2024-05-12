@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 
-
 import Input from "./components/Input";
 
 import Tasks from "./components/Tasks";
@@ -23,23 +22,23 @@ const initialTasks = [
     done: false,
   },
   {
-    id: 3,
+    id: 4,
     name: "Read for 1 hour",
     done: false,
   },
   {
-    id: 4,
+    id: 5,
     name: "Pick up groceries",
     done: false,
   },
   {
-    id: 5,
+    id: 6,
     name: "Complete Todo App on Frontend Mentor",
     done: false,
   },
 ];
 
-let nextId = 0;
+let nextId = 6;
 
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
