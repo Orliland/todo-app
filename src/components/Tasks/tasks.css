@@ -5,3 +5,27 @@
   box-shadow: var(--card-shadow);
   overflow: hidden;
 }
+
+.tasks__length {
+  color: var(--gray);
+
+  font: var(--body);
+  letter-spacing: -0.017rem;
+}
+
+.tasks__clear {
+  border: none;
+
+  color: var(--gray);
+
+  font: var(--body);
+  letter-spacing: -0.017rem;
+
+  background-color: transparent;
+}
+
+.tasks__clear:hover {
+  cursor: pointer;
+
+  color: var(--dark-purple);
+}

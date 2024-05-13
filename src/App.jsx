@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 
 import Input from "./components/Input";
-
 import Tasks from "./components/Tasks";
 
 const initialTasks = [
@@ -82,6 +81,10 @@ function App() {
     setTasks(tasks.filter((t) => t.id !== id));
   };
 
+  const onClearTasksHandler = () => {
+    setTasks(tasks.filter((t) => t.done == false));
+  };
+
   return (
     <main className="main">
       <Input task={task} onChange={onChangeTask} onSubmit={onSubmitTask} />
@@ -89,6 +92,7 @@ function App() {
         tasks={tasks}
         onChecked={onCheckTaskHandler}
         onDelete={onDeleteTaskHandler}
+        onClearTasks={onClearTasksHandler}
       />
     </main>
   );
