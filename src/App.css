@@ -5,6 +5,15 @@
   max-width: 54rem;
 }
 
+.header {
+  padding: 4.8rem 0 4rem;
+}
+
+.logo {
+  height: 2rem;
+  width: auto;
+}
+
 .footer {
   padding: 4rem 0 7.2rem;
 }
