@@ -1,6 +1,32 @@
 .tasks {
+  margin: 1.6rem 0;
   border-radius: 0.5rem;
 
   box-shadow: var(--card-shadow);
   overflow: hidden;
+}
+
+.tasks__length {
+  color: var(--gray);
+
+  font: var(--body);
+  letter-spacing: -0.017rem;
+}
+
+.tasks__clear {
+  padding: 0;
+  border: none;
+
+  color: var(--gray);
+
+  font: var(--body);
+  letter-spacing: -0.017rem;
+
+  background-color: transparent;
+}
+
+.tasks__clear:hover {
+  cursor: pointer;
+
+  color: var(--dark-purple);
 }

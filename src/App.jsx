@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./App.css";
+import Logo from "./assets/logo.svg";
 
 import Input from "./components/Input";
 import Tasks from "./components/Tasks";
+import FilterTasks from "./components/FilterTasks";
 
 const initialTasks = [
   {
@@ -37,11 +39,12 @@ const initialTasks = [
   },
 ];
 
-let nextId = 0;
+let nextId = 6;
 
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
   const [task, setTask] = useState("");
+  const [filter, setFilter] = useState("all");
 
   const onChangeTask = (e) => {
     setTask(e.target.value);
@@ -81,15 +84,32 @@ function App() {
     setTasks(tasks.filter((t) => t.id !== id));
   };
 
+  const onClearTasksHandler = () => {
+    setTasks(tasks.filter((t) => t.done == false));
+  };
+
+  const onFilterTasksHandler = (f) => {
+    setFilter(f);
+  };
+
   return (
-    <>
+    <main className="main">
+      <header className="header">
+        <img src={Logo} className="logo" />
+      </header>
       <Input task={task} onChange={onChangeTask} onSubmit={onSubmitTask} />
       <Tasks
         tasks={tasks}
         onChecked={onCheckTaskHandler}
         onDelete={onDeleteTaskHandler}
+        onClearTasks={onClearTasksHandler}
+        filter={filter}
       />
-    </>
+      <FilterTasks filter={filter} onFilterTasks={onFilterTasksHandler} />
+      <footer className="footer">
+        <p className="footer__text">Drag and drop to reorder list</p>
+      </footer>
+    </main>
   );
 }
 

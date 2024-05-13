@@ -11,8 +11,13 @@
   background-color: var(--white);
 }
 
+/* Estilos para estadisticas y clear */
 .task:last-child {
-  border: none;
+  justify-content: space-between;
+  grid-template-columns: auto auto;
+  padding: 1.6rem 2rem 2rem;
+  border: 0;
+  /* TODO: no remover borde en vista de desktop */
 }
 
 .task__check {

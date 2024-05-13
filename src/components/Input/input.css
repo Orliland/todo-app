@@ -4,7 +4,7 @@
   border-radius: 0.5rem;
 
   overflow: hidden;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--card-shadow);
 }
 
 .input__icon {
