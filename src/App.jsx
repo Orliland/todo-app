@@ -3,6 +3,7 @@ import "./App.css";
 
 import Input from "./components/Input";
 import Tasks from "./components/Tasks";
+import FilterTasks from "./components/FilterTasks";
 
 const initialTasks = [
   {
@@ -42,6 +43,7 @@ let nextId = 6;
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
   const [task, setTask] = useState("");
+  const [filter, setFilter] = useState("all");
 
   const onChangeTask = (e) => {
     setTask(e.target.value);
@@ -85,6 +87,10 @@ function App() {
     setTasks(tasks.filter((t) => t.done == false));
   };
 
+  const onFilterTasksHandler = (f) => {
+    setFilter(f);
+  };
+
   return (
     <main className="main">
       <Input task={task} onChange={onChangeTask} onSubmit={onSubmitTask} />
@@ -93,7 +99,9 @@ function App() {
         onChecked={onCheckTaskHandler}
         onDelete={onDeleteTaskHandler}
         onClearTasks={onClearTasksHandler}
+        filter={filter}
       />
+      <FilterTasks filter={filter} onFilterTasks={onFilterTasksHandler} />
     </main>
   );
 }
