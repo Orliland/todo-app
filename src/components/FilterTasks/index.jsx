@@ -1,16 +1,25 @@
 import "./filtertasks.css";
 
-export default function FilterTasks({ onFilterTasks }) {
+export default function FilterTasks({ filter, onFilterTasks }) {
   return (
     <div className="filters">
-      <button className="filter" onClick={() => onFilterTasks("all")}>
+      <button
+        className={`filter ${filter == "all" && "filter--active"}`}
+        onClick={() => onFilterTasks("all")}
+      >
         All
       </button>
-      <button className="filter" onClick={() => onFilterTasks("active")}>
+      <button
+        className={`filter ${filter == "active" && "filter--active"}`}
+        onClick={() => onFilterTasks("active")}
+      >
         Active
       </button>
-      <button className="filter" onClick={() => onFilterTasks("complete")}>
-        Complete
+      <button
+        className={`filter ${filter == "completed" && "filter--active"}`}
+        onClick={() => onFilterTasks("completed")}
+      >
+        Completed
       </button>
     </div>
   );

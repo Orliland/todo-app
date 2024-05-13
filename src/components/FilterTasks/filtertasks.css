@@ -21,3 +21,14 @@
   font: var(--body-l);
   letter-spacing: -0.019rem;
 }
+
+.filter:hover {
+  cursor: pointer;
+
+  color: var(--dark-purple);
+}
+
+.filter--active,
+.filter:focus {
+  color: var(--blue);
+}

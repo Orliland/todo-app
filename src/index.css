@@ -9,6 +9,7 @@
   --white: #ffffff;
   --dark-purple: #494c6b; /* task text */
   --light-gray-transparent: #c2c3d680;
+  --blue: #3a7cfd;
 
   --gradiente-check: linear-gradient(90deg, #55ddff 0%, #c058f3 100%);
   --card-shadow: 0 3.5rem 5rem -1.5rem var(--light-gray-transparent);

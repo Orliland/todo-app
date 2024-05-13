@@ -12,10 +12,28 @@ const InfoTasks = ({ tasks, onClearTasks }) => {
   );
 };
 
-export default function Tasks({ tasks, onChecked, onDelete, onClearTasks }) {
+export default function Tasks({
+  tasks,
+  onChecked,
+  onDelete,
+  onClearTasks,
+  filter,
+}) {
+  let tasksFiltered;
+  switch (filter) {
+    case "all":
+      tasksFiltered = tasks;
+      break;
+    case "active":
+      tasksFiltered = tasks.filter((t) => t.done == false);
+      break;
+    case "completed":
+      tasksFiltered = tasks.filter((t) => t.done);
+      break;
+  }
   return (
     <div className="tasks">
-      {tasks.map((task) => (
+      {tasksFiltered.map((task) => (
         <Task
           key={task.id}
           id={task.id}
