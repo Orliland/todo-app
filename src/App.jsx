@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Logo from "./assets/logo.svg";
 
 import Input from "./components/Input";
 import Tasks from "./components/Tasks";
@@ -93,6 +94,9 @@ function App() {
 
   return (
     <main className="main">
+      <header className="header">
+        <img src={Logo} className="logo" />
+      </header>
       <Input task={task} onChange={onChangeTask} onSubmit={onSubmitTask} />
       <Tasks
         tasks={tasks}
