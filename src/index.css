@@ -14,6 +14,7 @@
   --card-shadow: 0 3.5rem 5rem -1.5rem var(--light-gray-transparent);
 
   --body: 400 1.2rem "Josefin Sans", sans-serif; /* task text */
+  --body-l: 700 1.4rem "Josefin Sans", sans-serif;
 }
 
 body {

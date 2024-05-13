@@ -3,6 +3,7 @@ import "./App.css";
 
 import Input from "./components/Input";
 import Tasks from "./components/Tasks";
+import FilterTasks from "./components/FilterTasks";
 
 const initialTasks = [
   {
@@ -94,6 +95,7 @@ function App() {
         onDelete={onDeleteTaskHandler}
         onClearTasks={onClearTasksHandler}
       />
+      <FilterTasks />
     </main>
   );
 }

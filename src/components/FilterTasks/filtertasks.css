@@ -1,0 +1,23 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+
+  background-color: var(--white);
+
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.filter {
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+  color: var(--gray);
+
+  font: var(--body-l);
+  letter-spacing: -0.019rem;
+}
