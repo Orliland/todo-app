@@ -1,6 +1,7 @@
 import Task from "../Task";
 import "./tasks.css";
-const InfoTasks = ({ tasksLength, onClearTasks }) => {
+const InfoTasks = ({ tasks, onClearTasks }) => {
+  const tasksLength = tasks.filter((t) => t.done == false).length;
   return (
     <div className="task">
       <span className="tasks__length">{tasksLength} items left</span>
@@ -24,7 +25,7 @@ export default function Tasks({ tasks, onChecked, onDelete, onClearTasks }) {
           onDelete={onDelete}
         />
       ))}
-      <InfoTasks tasksLength={tasks.length} onClearTasks={onClearTasks} />
+      <InfoTasks tasks={tasks} onClearTasks={onClearTasks} />
     </div>
   );
 }
