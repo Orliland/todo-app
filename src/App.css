@@ -4,3 +4,16 @@
   margin: 0 auto;
   max-width: 54rem;
 }
+
+.footer {
+  padding: 4rem 0 7.2rem;
+}
+
+.footer__text {
+  padding: 0;
+  color: var(--gray);
+
+  font: var(--body-r);
+  letter-spacing: -0.019rem;
+  text-align: center;
+}
