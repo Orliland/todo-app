@@ -102,6 +102,9 @@ function App() {
         filter={filter}
       />
       <FilterTasks filter={filter} onFilterTasks={onFilterTasksHandler} />
+      <footer className="footer">
+        <p className="footer__text">Drag and drop to reorder list</p>
+      </footer>
     </main>
   );
 }
