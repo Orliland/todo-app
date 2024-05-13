@@ -19,7 +19,7 @@
   color: var(--gray);
 
   font: var(--body-l);
-  letter-spacing: -0.019rem;
+  letter-spacing: var(--ls-m);
 }
 
 .filter:hover {

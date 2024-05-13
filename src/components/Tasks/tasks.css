@@ -20,7 +20,7 @@
   color: var(--gray);
 
   font: var(--body);
-  letter-spacing: -0.017rem;
+  letter-spacing: var(--ls-s);
 
   background-color: transparent;
 }

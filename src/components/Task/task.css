@@ -49,7 +49,7 @@
   color: var(--dark-purple);
 
   font: var(--body);
-  letter-spacing: -0.017rem;
+  letter-spacing: var(--ls-s);
 }
 
 .task__label--checked {

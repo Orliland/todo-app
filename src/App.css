@@ -23,6 +23,6 @@
   color: var(--gray);
 
   font: var(--body-r);
-  letter-spacing: -0.019rem;
+  letter-spacing: var(--ls-s);
   text-align: center;
 }
