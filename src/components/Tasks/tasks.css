@@ -9,7 +9,7 @@
 .tasks__length {
   color: var(--gray);
 
-  font: var(--body);
+  font: var(--body-p);
   letter-spacing: -0.017rem;
 }
 
@@ -19,7 +19,7 @@
 
   color: var(--gray);
 
-  font: var(--body);
+  font: var(--body-p);
   letter-spacing: var(--ls-s);
 
   background-color: transparent;

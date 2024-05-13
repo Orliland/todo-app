@@ -29,6 +29,10 @@
   appearance: none;
 }
 
+.task__check:hover {
+  cursor: pointer;
+}
+
 .task__check:checked::before {
   content: url("../../assets/icon-check.svg");
   position: relative;

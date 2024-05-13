@@ -15,18 +15,28 @@
   --card-shadow: 0 3.5rem 5rem -1.5rem var(--light-gray-transparent);
 
   --body: 400 1.2rem "Josefin Sans", sans-serif; /* task text */
+  --body-p: 400 1.2rem "Josefin Sans", sans-serif; /* task text */
   --body-l: 700 1.4rem "Josefin Sans", sans-serif;
   --body-r: 400 1.4rem "Josefin Sans", sans-serif;
+  --bg-image: url("./assets/bg-mobile-light.jpg");
 
   --ls-s: -0.017rem;
   --ls-m: -0.019rem;
+}
+
+@media (min-width: 6rem) {
+  :root {
+    --ls-s: -0.025rem;
+    --body: 400 1.8rem "Josefin Sans", sans-serif; /* task text */
+    --bg-image: url("./assets/bg-desktop-light.jpg");
+  }
 }
 
 body {
   margin: 0;
   padding: 0 2.4rem;
 
-  background-image: url("./assets/bg-mobile-light.jpg");
+  background-image: var(--bg-image);
   background-repeat: no-repeat;
   background-size: contain;
   background-color: var(--light-gray);
