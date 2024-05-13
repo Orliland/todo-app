@@ -4,7 +4,7 @@
   border-radius: 0.5rem;
 
   overflow: hidden;
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 .input__icon {
@@ -25,8 +25,12 @@
   border: none;
   border-radius: 0.5rem;
 
-  color: var(--gray);
+  color: var(--dark-purple);
 
   font: var(--body);
   letter-spacing: -0.017rem;
+}
+
+.input__field::placeholder {
+  color: var(--gray);
 }
