@@ -1,10 +1,13 @@
 import Task from "../Task";
+import FilterTasks from "../FilterTasks";
 import "./tasks.css";
-const InfoTasks = ({ tasks, onClearTasks }) => {
+
+const InfoTasks = ({ tasks, onClearTasks, onFilterTasks, filter }) => {
   const tasksLength = tasks.filter((t) => t.done == false).length;
   return (
     <div className="task">
       <span className="tasks__length">{tasksLength} items left</span>
+      <FilterTasks filter={filter} onFilterTasks={onFilterTasks} />
       <button className="tasks__clear" onClick={onClearTasks}>
         Clear Completed
       </button>
@@ -18,6 +21,7 @@ export default function Tasks({
   onDelete,
   onClearTasks,
   filter,
+  onFilterTasks,
 }) {
   let tasksFiltered;
   switch (filter) {
@@ -43,7 +47,12 @@ export default function Tasks({
           onDelete={onDelete}
         />
       ))}
-      <InfoTasks tasks={tasks} onClearTasks={onClearTasks} />
+      <InfoTasks
+        tasks={tasks}
+        onClearTasks={onClearTasks}
+        onFilterTasks={onFilterTasks}
+        filter={filter}
+      />
     </div>
   );
 }

@@ -11,13 +11,23 @@
   background-color: var(--white);
 }
 
+.task__label {
+  cursor: pointer;
+}
+
 /* Estilos para estadisticas y clear */
 .task:last-child {
+  position: relative;
   justify-content: space-between;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   padding: 1.6rem 2rem 2rem;
   border: 0;
+  border-radius: 0 0 0.5rem 0.5rem;
   /* TODO: no remover borde en vista de desktop */
+}
+
+.task:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .task__check {
@@ -27,6 +37,10 @@
   border: 0.1rem solid var(--border-gray);
   border-radius: 50%;
   appearance: none;
+}
+
+.task__check:hover {
+  cursor: pointer;
 }
 
 .task__check:checked::before {
@@ -49,7 +63,7 @@
   color: var(--dark-purple);
 
   font: var(--body);
-  letter-spacing: -0.017rem;
+  letter-spacing: var(--ls-s);
 }
 
 .task__label--checked {
@@ -66,7 +80,42 @@
   background-color: transparent;
 }
 
+.task__delete:hover {
+  cursor: pointer;
+}
+
 .task__delete-icon {
   width: 1.2rem;
   aspect-ratio: 1/1;
+}
+
+@media (min-width: 60rem) {
+  .task {
+    gap: 2.4rem;
+
+    padding: 2rem 2.4rem;
+  }
+
+  .task__check {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .task__check:checked::before {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .task__delete {
+    display: none;
+    width: 1.8rem;
+  }
+
+  .task:hover .task__delete {
+    display: block;
+  }
+
+  .task:last-child {
+    padding: 1.6rem 2.4rem;
+  }
 }

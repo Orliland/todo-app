@@ -3,13 +3,18 @@
   border-radius: 0.5rem;
 
   box-shadow: var(--card-shadow);
-  overflow: hidden;
+}
+
+@media (min-width: 60rem) {
+  .tasks {
+    margin-top: 2.4rem;
+  }
 }
 
 .tasks__length {
   color: var(--gray);
 
-  font: var(--body);
+  font: var(--body-p);
   letter-spacing: -0.017rem;
 }
 
@@ -19,8 +24,8 @@
 
   color: var(--gray);
 
-  font: var(--body);
-  letter-spacing: -0.017rem;
+  font: var(--body-p);
+  letter-spacing: var(--ls-s);
 
   background-color: transparent;
 }

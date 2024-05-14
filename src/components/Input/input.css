@@ -28,7 +28,18 @@
   color: var(--dark-purple);
 
   font: var(--body);
-  letter-spacing: -0.017rem;
+  letter-spacing: var(--ls-s);
+}
+
+@media (min-width: 60rem) {
+  .input__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .input__field {
+    padding: 2rem 2.4rem 2rem 7rem;
+  }
 }
 
 .input__field::placeholder {
