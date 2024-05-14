@@ -24,22 +24,19 @@
   --ls-m: -0.019rem;
 }
 
-@media (min-width: 6rem) {
-  :root {
+@media (min-width: 600px) {
+  body {
     --ls-s: -0.025rem;
-    --body: 400 1.8rem "Josefin Sans", sans-serif; /* task text */
+    --body: 400 1.8rem "Josefin Sans", sans-serif;
     --bg-image: url("./assets/bg-desktop-light.jpg");
   }
 }
-
 body {
   margin: 0;
   padding: 0 2.4rem;
 
   background-image: var(--bg-image);
-  background-repeat: no-repeat;
   background-size: contain;
+  background-repeat: no-repeat;
   background-color: var(--light-gray);
-
-  font-size: 1.8rem;
 }
