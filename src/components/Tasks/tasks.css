@@ -5,6 +5,12 @@
   box-shadow: var(--card-shadow);
 }
 
+@media (min-width: 60rem) {
+  .tasks {
+    margin-top: 2.4rem;
+  }
+}
+
 .tasks__length {
   color: var(--gray);
 
