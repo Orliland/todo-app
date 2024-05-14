@@ -4,7 +4,6 @@ import Logo from "./assets/logo.svg";
 
 import Input from "./components/Input";
 import Tasks from "./components/Tasks";
-import FilterTasks from "./components/FilterTasks";
 
 const initialTasks = [
   {
@@ -104,8 +103,8 @@ function App() {
         onDelete={onDeleteTaskHandler}
         onClearTasks={onClearTasksHandler}
         filter={filter}
+        onFilterTasks={onFilterTasksHandler}
       />
-      <FilterTasks filter={filter} onFilterTasks={onFilterTasksHandler} />
       {/* <footer className="footer">
         <p className="footer__text">Drag and drop to reorder list</p>
       </footer> */}
