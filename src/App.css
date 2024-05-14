@@ -14,6 +14,15 @@
   width: auto;
 }
 
+@media (min-width: 60rem) {
+  .header {
+    padding: 7.4rem 0 5.4rem;
+  }
+  .logo {
+    height: 3rem;
+  }
+}
+
 .footer {
   padding: 4rem 0 7.2rem;
 }
